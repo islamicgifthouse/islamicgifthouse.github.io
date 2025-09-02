@@ -1,0 +1,9 @@
+:root { color-scheme: dark }
+
+@media (prefers-color-scheme: light) {
+	:root { color-scheme: light }
+}
+
+body {
+	font-family: "Segoe UI";
+}
