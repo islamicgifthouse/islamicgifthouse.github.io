@@ -1,9 +1,187 @@
-:root { color-scheme: dark }
+:root {
+	--hue-accent: 36deg;
+	--accent: hsl(var(--hue-accent) 41% 55%);
+	accent-color: var(--accent);
+	color-scheme: dark;
+	scrollbar-color: hsl(var(--hue-accent) 10% 25% / 80%) transparent;
+}
+
+:root:hover { scrollbar-color: hsl(var(--hue-accent) 10% 30% / 85%) transparent }
 
 @media (prefers-color-scheme: light) {
 	:root { color-scheme: light }
+
+	body > footer { background-color: white }
+}
+
+@media (prefers-color-scheme: dark) {
+	body > footer { background-color: #121212 }
+}
+
+html {
+	background-attachment: fixed;
+	background-image: url(/assets/images/icons/favicon-watermark.svg);
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 body {
 	font-family: "Segoe UI";
+	margin: 0;
+}
+
+a { color: currentColor }
+a:not(:hover) { text-decoration: none }
+
+.notice {
+	align-content: center;
+	font-size: clamp(13px, 5vmin, 33px);
+	font-weight: 100;
+	height: 100vh;
+	margin: 0 clamp(4px, 2.5em, 5vw);
+	text-align: center;
+}
+
+.icon {
+	min-height: 1em;
+	min-width: 1em;
+}
+
+.icon, .social-icon {
+	aspect-ratio: 1;
+	background-color: currentColor;
+	mask-position: center;
+	mask-repeat: no-repeat;
+	/* min-height: 1em;
+	min-width: 1em; */
+}
+
+body > footer {
+	border-top: 1px solid hsl(0 0 50% / 25%);
+	padding: 4em 5% 2em;
+}
+
+body > footer > main {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 2em;
+	margin: 0 auto;
+	max-width: 1400px;
+}
+
+body > footer .footer-logo {
+	font-size: 1.65em;
+	font-weight: 700;
+	margin-bottom: 1em;
+	display: block;
+}
+
+body > footer .footer-logo span { color: var(--accent) }
+body > footer .footer-about p {
+	color: hsl(0 0 50%);
+	margin-bottom: 1.5em;
+}
+
+.social-links { display: flex }
+.social-links a {
+	align-items: center;
+	color: var(--accent);
+	display: inline-flex;
+	height: 1.6em;
+	justify-content: center;
+	margin-right: 1em;
+	width: 1.6em;
+}
+
+.footer-contact h3 { margin-bottom: 1em }
+.footer-contact p {
+	align-items: center;
+	color: hsl(0 0 50%);
+	display: flex;
+	margin-bottom: 1em;
+}
+
+.footer-contact p .icon {
+	color: var(--accent);
+	margin-right: 1em;
+}
+
+body > footer > .copyright::before { content: "© " }
+body > footer > .copyright {
+	border-top: 1px solid hsl(0 0 50% / 10%);
+	color: hsl(0 0 50% / 80%);
+	font-size: .9em;
+	margin-bottom: 0;
+	margin-top: 2em;
+	padding-top: 2em;
+	text-align: center;
+}
+
+.icon.hours { mask-image: url(/assets/images/icons/contact/hours.svg) }
+.icon.location { mask-image: url(/assets/images/icons/contact/location.svg) }
+.icon.mail { mask-image: url(/assets/images/icons/contact/mail.svg) }
+.icon.phone { mask-image: url(/assets/images/icons/contact/phone.svg) }
+.social-icon.facebook { mask-image: url(/assets/images/icons/social/facebook.svg) }
+.social-icon.instagram { mask-image: url(/assets/images/icons/social/instagram.svg) }
+.social-icon.whatsapp { mask-image: url(/assets/images/icons/social/whatsapp.svg) }
+
+a.whatsapp-float {
+	aspect-ratio: 1;
+	background-color: #8e734a;
+	bottom: 1em;
+	position: fixed;
+	left: 1em;
+	width: 3em;
+	height: 3em;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+	z-index: 333;
+	transition: scale .15s;
+}
+
+a.whatsapp-float > .social-icon.whatsapp {
+	aspect-ratio: 1;
+	background-color: white;
+	width: 60%;
+}
+
+@media (hover: none) {
+	.whatsapp-float:active { scale: 1.1 }
+}
+
+@media (hover: hover) {
+	.whatsapp-float:hover { scale: 1.1 }
+}
+
+iframe.whatsapp-float {
+	aspect-ratio: 1;
+	clip-path: circle();
+}
+
+.zengin-watermark {
+	margin-top: auto;
+	position: relative;
+	text-align: center;
+	user-select: none;
+}
+
+.zengin-watermark > canvas {
+	background-color: hsl(0 0 0 / 90%);
+	height: 100%;
+	inset: 0;
+	position: absolute;
+	touch-action: none;
+	width: 100%;
+}
+
+.zengin-watermark > canvas ~ .text-overlay {
+	color: white;
+	font-size: smaller;
+	margin: 0;
+	mix-blend-mode: screen;
+	padding: .2em;
+	pointer-events: none;
 }
