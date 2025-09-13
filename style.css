@@ -106,7 +106,7 @@ body > footer .contact p .icon {
 	margin-right: 1em;
 }
 
-body > footer > .copyright::before { content: "© " }
+/* body > footer > .copyright::before { content: "© " } */
 body > footer > .copyright {
 	border-top: 1px solid hsl(0 0 50% / 10%);
 	color: hsl(0 0 50% / 80%);
@@ -156,11 +156,6 @@ a.whatsapp-float > .social-icon.whatsapp {
 	.whatsapp-float:hover { scale: 1.1 }
 }
 
-iframe.whatsapp-float {
-	aspect-ratio: 1;
-	clip-path: circle();
-}
-
 .zengin-watermark {
 	margin-top: auto;
 	position: relative;
@@ -185,3 +180,5 @@ iframe.whatsapp-float {
 	padding: .2em;
 	pointer-events: none;
 }
+
+.non-selectable { user-select: none }
