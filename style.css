@@ -1,6 +1,7 @@
 :root {
 	--hue-accent: 36deg;
-	--accent: hsl(var(--hue-accent) 41% 55%);
+	--accent: hsl(var(--hue-accent) 44% 55%);
+	--accent-subtle: hsl(var(--hue-accent) 33% 66%);
 	accent-color: var(--accent);
 	color-scheme: dark;
 	scrollbar-color: hsl(var(--hue-accent) 10% 25% / 80%) transparent;
@@ -57,6 +58,11 @@ a:not(:hover) { text-decoration: none }
 }
 
 body > footer {
+	/* experiment */
+	backdrop-filter: blur(33rem);
+	opacity: .89;
+	/* experiment end */
+
 	border-top: 1px solid hsl(0 0 50% / 25%);
 	padding: 4em 5% 2em;
 }
