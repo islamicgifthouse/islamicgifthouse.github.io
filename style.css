@@ -193,3 +193,15 @@ a.whatsapp-float > .social-icon.whatsapp {
 }
 
 .non-selectable { user-select: none }
+
+.vertical-rule {
+	background-color: hsl(0 0 50% / 75%);
+	display: inline-block;
+	height: 1em;
+	margin-block-start: auto;
+	margin-block-end: auto;
+	margin-inline-start: .5em;
+	margin-inline-end: .5em;
+	vertical-align: middle;
+	width: 1px;
+}
