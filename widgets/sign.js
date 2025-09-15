@@ -6,29 +6,35 @@ customElements.define('igh-sign', class IGHSign extends HTMLElement {
 			:host {
 				--tint: 0;
 				-webkit-user-drag: none;
-				background-color: hsl(var(--tint) 33% 13% / 90%);
-				border: 1px solid hsl(var(--tint) 33% 33% / 25%);
+				/* background-color: hsl(var(--tint) 33% 13% / 90%); */
+				/* border: 1px solid hsl(var(--tint) 33% 33% / 25%); */
 				border-radius: .4em;
-				box-shadow: inset 0 -.3em hsl(var(--tint) 40% 18% / 70%);
+				/* box-shadow: inset 0 -.3em hsl(var(--tint) 40% 18% / 70%); */
 				color: hsl(var(--tint) 75% 85%);
+				display: block;
 				font-family: 'Segoe UI','Helvetica Neue',Helvetica,Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans',sans-serif;
 				font-size: clamp(13px, 1.25vmax, 20px);
+				justify-self: anchor-center;
 				left: .5em;
 				line-height: 100%;
+				margin: 0 auto;
 				opacity: .44;
 				padding: 1em;
 				padding-top: .5em;
-				position: fixed;
+				/* position: fixed; */
+				position: absolute;
+				text-align: center;
 				/* text-transform: uppercase; */
 				transform-origin: left top;
 				transition: background-color .3s, border-color .3s, box-shadow .3s, color .3s, scale .2s;
 				top: .5em;
 				user-select: none;
+				width: fit-content;
 				will-change: background-color, border-color, box-shadow, color, scale;
 			}
 
-			@media (hover: none) {:host(:active) { scale: 1.3 }}
-			@media (hover: hover) {:host(:hover) { scale: 1.2 }}
+			// @media (hover: none) {:host(:active) { scale: 1.3 }}
+			// @media (hover: hover) {:host(:hover) { scale: 1.2 }}
 			:host([open]) {
 				--tint: 140deg;
 				opacity: .66;
