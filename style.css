@@ -16,7 +16,6 @@
 
 @media (prefers-color-scheme: light) {
 	:root { color-scheme: light }
-
 	body > footer { background-color: white }
 }
 
@@ -159,12 +158,21 @@ a.whatsapp-float > .social-icon.whatsapp {
 	width: 60%;
 }
 
-@media (hover: none) {
-	.whatsapp-float:active { scale: 1.1 }
-}
+@media (hover: none) {.whatsapp-float:active { scale: 1.1 }}
+@media (hover: hover) {.whatsapp-float:hover { scale: 1.1 }}
 
-@media (hover: hover) {
-	.whatsapp-float:hover { scale: 1.1 }
+.non-selectable { user-select: none }
+
+.vertical-rule {
+	background-color: hsl(0 0 50% / 75%);
+	display: inline-block;
+	height: 1em;
+	margin-block-start: auto;
+	margin-block-end: auto;
+	margin-inline-start: .5em;
+	margin-inline-end: .5em;
+	vertical-align: middle;
+	width: 1px;
 }
 
 .zengin-watermark {
@@ -190,18 +198,4 @@ a.whatsapp-float > .social-icon.whatsapp {
 	mix-blend-mode: screen;
 	padding: .2em;
 	pointer-events: none;
-}
-
-.non-selectable { user-select: none }
-
-.vertical-rule {
-	background-color: hsl(0 0 50% / 75%);
-	display: inline-block;
-	height: 1em;
-	margin-block-start: auto;
-	margin-block-end: auto;
-	margin-inline-start: .5em;
-	margin-inline-end: .5em;
-	vertical-align: middle;
-	width: 1px;
 }
