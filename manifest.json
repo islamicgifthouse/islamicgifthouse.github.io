@@ -1,0 +1,59 @@
+{
+	"background_color": "#121212",
+	"categories": ["books", "education", "health", "kids", "shopping", "travel"],
+	"description": "Discover meaningful Islamic goods at Islamic Gift House – your premier destination for curated items celebrating faith and culture.",
+	"display": "standalone",
+	"display_override": ["fullscreen", "minimal-ui", "tabbed", "window-controls-overlay"],
+	"icons": [{
+		"purpose": "any",
+		"sizes": "any",
+		"src": "/favicon.ico"
+	}, {
+		"purpose": "any",
+		"sizes": "any",
+		"src": "/assets/images/icons/favicon.svg",
+		"type": "image/svg+xml"
+	},  {
+		"sizes": "512x512",
+		"src": "/assets/images/icons/favicon.png",
+		"type": "image/png"
+	}],
+	"launch_handler": { "client_mode": "navigate-existing" },
+	"name": "Islamic Gift House | دار الهدايا الإسلامية",
+	"orientation": "portrait",
+	"protocol_handlers": [{
+		"protocol": "web+igh",
+		"url": "/%s"
+	}],
+	"scope": "/",
+	"scope_extensions": [
+		{ "type": "origin", "origin": "https://auth.islamicgifthouse.ca"},
+		{ "type": "origin", "origin": "https://cdn.islamicgifthouse.ca"},
+		{ "type": "origin", "origin": "https://market.islamicgifthouse.ca"},
+		{ "type": "origin", "origin": "https://marketplace.islamicgifthouse.ca"},
+		{ "type": "origin", "origin": "https://shop.islamicgifthouse.ca"}
+	],
+	"screenshots": [{
+		"form_factor": "narrow",
+		"sizes": "720x1280",
+		"src": "/assets/images/screenshots/landing_page.narrow.webp",
+		"type": "image/webp"
+	}, {
+		"form_factor": "wide",
+		"sizes": "1280x720",
+		"src": "/assets/images/screenshots/landing_page.webp",
+		"type": "image/webp"
+	}],
+	"short_name": "IGH",
+	"shortcuts": [{
+		"name": "Hours",
+		"url": "hours",
+		"icons": [{
+			"sizes": "96x96",
+			"src": "/assets/images/icons/contact/hours.svg",
+			"type": "image/svg+xml"
+		}]
+	}],
+	"start_url": "/",
+	"theme_color": "#c5ae8c"
+}
